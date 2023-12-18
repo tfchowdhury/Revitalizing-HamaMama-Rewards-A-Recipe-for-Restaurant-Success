@@ -1,0 +1,42 @@
+CREATE TABLE MenuItem (
+ITEM_ID INT PRIMARY KEY,
+ITEM_NAME VARCHAR(100) NOT NULL,
+ITEM_DESCRIPTION VARCHAR(255),
+ITEM_PRICE NUMBER(9,2) NOT NULL,
+DIET_INFORMATION VARCHAR(255),
+SPECIAL_ITEM CHAR(1) DEFAULT 'N'
+CHECK (SPECIAL_ITEM IN ('Y', 'N')),
+HAMAFIT_OPTION CHAR(1) DEFAULT 'N'
+CHECK (HAMAFIT_OPTION IN ('Y', 'N')) 
+);
+
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(1,'Classic Burger','Juicy beef patty with lettuce, tomato, and cheese',9.99,'Contains meat and dairy','N','Y');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(2,'Vegetarian Pizza','Fresh veggies and cheese on a crispy crust',12.99,'Vegetarian','N','Y');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(3,'Chicken Caesar Salad','Grilled chicken with crisp romaine lettuce and Caesar dressing',8.99,'Contains meat and dairy','N','N');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(4,'Vegan Burrito','Black beans, rice, and veggies wrapped in a tortilla',10.99,'Vegan','N','Y');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(5,'Seafood Pasta','Spaghetti with a medley of seafood in a creamy sauce',14.99,'Contains seafood','Y','N');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(6,'Gluten-Free Pancakes','Fluffy pancakes made with gluten-free flour',7.99,'Gluten-Free','Y','Y');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(7,'Mango Tango Smoothie','Refreshing smoothie with mango, banana, and yogurt',5.99,'Contains dairy','N','N');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(8,'Spicy Tofu Stir-Fry','Tofu and mixed vegetables in a spicy soy-based sauce',11.99,'Vegan','N','N');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(9,'Cheesecake Supreme','Rich and creamy cheesecake with a graham cracker crust',6.99,'Contains dairy','Y','N');
+INSERT INTO MenuItem (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_PRICE, DIET_INFORMATION, SPECIAL_ITEM, HAMAFIT_OPTION)
+VALUES
+(10,'Grilled Salmon','Salmon fillet seasoned and grilled to perfection',13.99,'Contains seafood','N','Y');
